@@ -4,17 +4,46 @@
     box-sizing: border-box;
 }  
 
+.titulo_secundario{
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+.titulo_terciario{
+    font-size: 1.2rem;
+    text-align: center;
+}
+
 .nav{
     padding: 1rem;
-    background-color: #5dc1b9;
+    background-color: transparent;
     border: solid 1px black;
+    position: sticky;
+    background-color: blue;
 }
 
 .nav-buttons{
     display: flex;
     justify-content: flex-end;
+    list-style: none;
 }
 
-h1{
-    color: red;
+.nav-buttons li{
+    margin: 0 1rem;
+}
+
+.nav-buttons li a{
+    text-decoration: none; 
+    color: inherit;        
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+}
+
+.lista_integrantes{
+    text-decoration: none; 
+    color: inherit; 
 }
