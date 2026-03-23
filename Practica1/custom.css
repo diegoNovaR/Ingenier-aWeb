@@ -1,0 +1,14 @@
+.body{
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav{
+    padding: 1.5rem;
+    border: solid 1px black;
+}
+
+h1{
+    color: red;
+}
