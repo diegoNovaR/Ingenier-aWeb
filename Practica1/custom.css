@@ -1,11 +1,18 @@
 .body{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }  
 
 .nav{
-    padding: 1.5rem;
+    padding: 1rem;
+    background-color: #5dc1b9;
     border: solid 1px black;
+}
+
+.nav-buttons{
+    display: flex;
+    justify-content: flex-end;
 }
 
 h1{
