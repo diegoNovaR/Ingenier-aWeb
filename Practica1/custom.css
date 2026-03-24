@@ -61,10 +61,24 @@ body{
     background-color: #07374a;
     width: 100%;
     text-align: center;
+}   
+
+.formulario h1{
+    text-align: center;
 }
 
 .formulario label{
     margin-bottom: 1rem;
-    display: row;
+    display: grid;
+}
+
+.form-group{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.form-group label{
+    width: 200px;
 }
 
