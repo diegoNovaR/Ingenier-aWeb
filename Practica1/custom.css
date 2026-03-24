@@ -54,3 +54,17 @@ body{
     color: inherit; 
     list-style: none;
 }
+
+
+/*FORMULARIO*/
+.formulario{
+    background-color: #07374a;
+    width: 100%;
+    text-align: center;
+}
+
+.formulario label{
+    margin-bottom: 1rem;
+    display: row;
+}
+
