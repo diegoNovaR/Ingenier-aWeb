@@ -41,6 +41,7 @@ body{
 .container{
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .container .presentacion{
@@ -67,18 +68,63 @@ body{
     text-align: center;
 }
 
-.formulario label{
-    margin-bottom: 1rem;
-    display: grid;
-}
-
-.form-group{
+.submit{
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
 }
 
-.form-group label{
-    width: 200px;
+.form-group{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.8rem;
 }
+
+.form-group label{
+    width: 100px;
+    margin: auto;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.form-group input {
+    flex: 1;
+    width: 250px;
+    min-width: 100px;
+    max-width: 350px;
+    padding: 5px;
+}
+
+/*Iconos*/
+
+.container-icon{
+    background-color: #07374a;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.container-icon i{
+    font-size: 1.8rem;
+    color: aliceblue;
+    transition: all 0.3s ease;
+}
+
+.container-icon i:hover {
+    color: #e1306c;    
+    transform: scale(1.2); 
+}
+
+.container-icon p{
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px 15px;
+}
+
+
 
