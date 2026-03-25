@@ -3,6 +3,7 @@
     --color-fondo: #fff;
     --color-letra: #1e4ea5;
     --color-letra-base: #000000;
+    --color-fondo-2:#eaf4ff;
 }
 
 body{
@@ -88,8 +89,13 @@ body{
 }
 
 .titulo_secundario{
-    font-size: 1.75rem;
+    font-size: 2rem;
     text-align: left;
+}
+
+.seccion_grupal2{
+    background-color: var(--color-fondo-2);
+    padding: 4rem;
 }
 
 .lista_integrantes{
@@ -97,7 +103,55 @@ body{
     color: inherit; 
     list-style: none;
 }
+/** Cards **/
+.fastFacts{
+    padding: 4rem 0;
+    text-align: center;
+}
 
+.titulo_terciario{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+/* CARD */
+.card{
+    background-color: #fff;
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+    border: 1px solid #eee;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    flex: 0 0 23%;
+}
+.descripcion_grupal{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.card h3{
+    margin: 0;
+    font-size: 1.3rem;
+    color: var(--color-letra-base);
+}
+
+.card h3 strong{
+    font-weight: 600;
+}
+
+.card h3 span{
+    font-size: 0.9rem;
+    color: #666;
+    display: block;
+    margin-top: 5px;
+}
 
 /*FORMULARIO*/
 .formulario{
