@@ -1,3 +1,9 @@
+/* Colores */
+:root{
+    --color-fondo: #fff;
+    --color-letra: #1e4ea5;
+    --color-letra-base: #000000;
+}
 
 body{
     margin: 0;
@@ -15,14 +21,19 @@ body{
     font-size: 1.2rem;
     text-align: center;
 }
-
 .nav{
     padding: 1rem;
+    display: flex;
+    justify-content: space-between;
     background-color: transparent;
-    position: sticky;
-    background-color: #fff;
+    background-color: var(--color-fondo);
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
+.logo {
+    width: 160px;
+    height: auto;
+}
 .nav-buttons{
     display: flex;
     justify-content: flex-end;
@@ -34,8 +45,25 @@ body{
 }
 
 .nav-buttons li a{
-    text-decoration: none; 
-    color: inherit;        
+    text-decoration: none;
+    color: var(--color-texto);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;       
+}
+
+.nav-buttons li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-letra);
+    transition: width 0.3s ease;
+}
+.nav-buttons li a:hover::after{
+    width: 100%;
 }
 
 .container{
