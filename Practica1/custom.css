@@ -1,66 +1,53 @@
-/* Colores */
+/* Variables */
 :root{
     --color-fondo: #fff;
     --color-letra: #1e4ea5;
     --color-letra-base: #000000;
-    --color-fondo-2:#eaf4ff;
-}
+    --color-fondo-2: #eaf4ff;
+} 
 
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-}  
-
-.titulo_terciario{
-    font-size: 1.2rem;
-    text-align: left;
-    margin-top: 1rem;
-    margin-bottom: 2.5rem;
 }
 
-.seccion_grupal{
-    padding: 10rem 0 8rem 0;
-}
-
-.presentacion{
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.presentacion p {
-    text-align: justify;
-}
 .container{
     max-width: 1100px;  
     margin: 0 auto;    
     padding: 0 1.5rem;
 }
 
-.container .presentacion{
-    background-color: var(--color-fondo);
-    width: 100%;
+.titulo_secundario{
+    font-size: 2rem;
     text-align: left;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
 }
 
+.titulo_terciario{
+    font-size: 2.3rem;
+    font-weight: 600;
+    text-align: left;
+    margin: 1rem 0 2.5rem;
+}
+
+/* Navbar */
 .nav{
     padding: 1rem;
     display: flex;
     justify-content: space-between;
-    background-color: var(--color-fondo);
     align-items: center;
+    background-color: var(--color-fondo);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 .logo {
     width: 160px;
     height: auto;
 }
+
 .nav-buttons{
     display: flex;
-    justify-content: flex-end;
     list-style: none;
 }
 
@@ -70,10 +57,10 @@ body{
 
 .nav-buttons li a{
     text-decoration: none;
-    color: var(--color-texto);
+    color: var(--color-letra-base);
     position: relative;
     display: inline-block;
-    padding-bottom: 5px;       
+    padding-bottom: 5px;
 }
 
 .nav-buttons li a::after{
@@ -86,51 +73,62 @@ body{
     background-color: var(--color-letra);
     transition: width 0.3s ease;
 }
+
 .nav-buttons li a:hover::after{
     width: 100%;
 }
 
-.titulo_secundario{
-    font-size: 2rem;
-    text-align: left;
+/* Secciones */
+.seccion_grupal{
+    padding: 5rem 0 3rem;
 }
 
 .seccion_grupal2{
     background-color: var(--color-fondo-2);
-    padding: 4rem;
+    padding: 3rem;
+}
+
+.presentacion{
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.presentacion p{
+    text-align: justify;
+    font-size: 1.3rem;
+}
+
+.container .presentacion{
+    background-color: var(--color-fondo);
+    width: 100%;
+    text-align: left;
 }
 
 .lista_integrantes{
-    text-decoration: none; 
-    color: inherit; 
     list-style: none;
+    text-decoration: none;
+    color: inherit;
 }
-/** Cards **/
+
+/* Cards */
 .fastFacts{
     padding: 4rem 0;
     text-align: center;
 }
 
-.titulo_terciario{
-    font-size: 2.3rem;
-    font-weight: 600;
+.descripcion_grupal{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
 }
 
-/* CARD */
 .card{
     background-color: var(--color-fondo);
     padding: 1.5rem 1rem;
     border-radius: 12px;
     border: 1px solid #eee;
-
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     transition: all 0.3s ease;
-    flex: 0 0 23%;
-}
-.descripcion_grupal{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
 }
 
 .card:hover{
@@ -155,75 +153,7 @@ body{
     margin-top: 5px;
 }
 
-/*FORMULARIO*/
-.formulario{
-    background-color: #07374a;
-    width: 100%;
-    text-align: center;
-}   
-
-.formulario h1{
-    text-align: center;
-}
-
-.submit{
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.form-group{
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.8rem;
-}
-
-.form-group label{
-    width: 100px;
-    margin: auto;
-}
-
-.form{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-
-.form-group input {
-    flex: 1;
-    width: 250px;
-    min-width: 100px;
-    max-width: 350px;
-    padding: 5px;
-}
-
-/*Iconos*/
-
-.container-icon{
-    background-color: #07374a;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
-
-.container-icon i{
-    font-size: 1.8rem;
-    color: var(--color-fondo);
-    transition: all 0.3s ease;
-}
-
-.container-icon i:hover {
-    color: #e1306c;    
-    transform: scale(1.2); 
-}
-
-.container-icon p{
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 10px 15px;
-}
-
+/* Sobre nosotros */
 .about_feature{
     padding: 4rem 0;
 }
@@ -247,12 +177,79 @@ body{
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
-.about_text p {
-    font-size: 1.8rem;
+
+.about_text p{
+    font-size: 1.4rem;
     text-align: justify;
 }
+
 .about_grid.reverse .about_img{
     order: 2;
 }
 
+/* Formulario */
+.formulario{
+    background-color: #07374a;
+    width: 100%;
+    text-align: center;
+}
 
+.formulario h1{
+    text-align: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.8rem;
+}
+
+.form-group label{
+    width: 100px;
+    margin: auto;
+}
+
+.form-group input{
+    flex: 1;
+    width: 250px;
+    min-width: 100px;
+    max-width: 350px;
+    padding: 5px;
+}
+
+.submit{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Iconos */
+.container-icon{
+    background-color: #07374a;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.container-icon i{
+    font-size: 1.8rem;
+    color: var(--color-fondo);
+    transition: all 0.3s ease;
+}
+
+.container-icon i:hover{
+    color: #e1306c;
+    transform: scale(1.2);
+}
+
+.container-icon p{
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px 15px;
+}
