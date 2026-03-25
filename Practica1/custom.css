@@ -112,13 +112,13 @@ body{
 }
 
 .titulo_terciario{
-    font-size: 1.8rem;
+    font-size: 2.3rem;
     font-weight: 600;
 }
 
 /* CARD */
 .card{
-    background-color: #fff;
+    background-color: var(--color-fondo);
     padding: 1.5rem 1rem;
     border-radius: 12px;
     border: 1px solid #eee;
@@ -209,7 +209,7 @@ body{
 
 .container-icon i{
     font-size: 1.8rem;
-    color: aliceblue;
+    color: var(--color-fondo);
     transition: all 0.3s ease;
 }
 
@@ -224,5 +224,35 @@ body{
     margin: 10px 15px;
 }
 
+.about_feature{
+    padding: 4rem 0;
+}
+
+.about_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.about_img img{
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.about_text{
+    background-color: var(--color-fondo);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+.about_text p {
+    font-size: 1.8rem;
+    text-align: justify;
+}
+.about_grid.reverse .about_img{
+    order: 2;
+}
 
 
