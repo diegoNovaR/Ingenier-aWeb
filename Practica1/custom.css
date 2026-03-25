@@ -188,10 +188,17 @@ body{
 }
 
 /* Formulario */
+.seccion_formulario{
+    background-color: var(--color-letra);
+    padding: 4rem; 
+}
 .formulario{
-    background-color: #07374a;
-    width: 100%;
-    text-align: center;
+    background-color: var(--color-fondo); /* blanco */
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2.6rem;
 }
 
 .formulario h1{
@@ -231,7 +238,6 @@ body{
 
 /* Iconos */
 .container-icon{
-    background-color: #07374a;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -252,4 +258,5 @@ body{
     font-size: 1rem;
     font-weight: bold;
     margin: 10px 15px;
+    color: var(--color-fondo);
 }
