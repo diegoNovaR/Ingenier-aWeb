@@ -19,6 +19,19 @@ body{
     padding: 0 1.5rem;
 }
 
+.pageFeaturedImage{
+    height: 80vh;       
+    width: 100%;
+    overflow: hidden;
+}
+
+.pageFeaturedImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+    display: block;
+}
+
 .titulo_secundario{
     font-size: 2rem;
     text-align: left;
