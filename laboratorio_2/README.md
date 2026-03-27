@@ -89,10 +89,3 @@ docker rmi image_msilvac
 ```
 
 ---
-
-## 💻 Subir a GitHub
-```powershell
-git add laboratorio_2/README.md
-git commit -m "README final unificado y profesional"
-git push origin main
-```
