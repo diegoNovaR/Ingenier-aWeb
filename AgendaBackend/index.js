@@ -10,3 +10,7 @@ app.get("/", (req, res) => {
 app.listen(3000, () => {
     console.log("Servidor en http://localhost:3000");
 });
+
+const eventosRoutes = require("./routes/eventos");
+
+app.use("/eventos", eventosRoutes);
