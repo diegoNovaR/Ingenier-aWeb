@@ -10,7 +10,7 @@ if (!fs.existsSync(carpeta)) {
     fs.mkdirSync(carpeta);
 }
 
-// obtener todos los eventos con ID
+
 function obtenerEventos() {
     const archivos = fs.readdirSync(carpeta);
 
@@ -29,13 +29,13 @@ function obtenerEventos() {
     });
 }
 
-// 📌 GET TODOS
+
 router.get("/", (req, res) => {
     const eventos = obtenerEventos();
     res.json(eventos);
 });
 
-// 📌 GET POR ID
+
 router.get("/:id", (req, res) => {
     const eventos = obtenerEventos();
     const id = parseInt(req.params.id);
@@ -49,7 +49,6 @@ router.get("/:id", (req, res) => {
     res.json(evento);
 });
 
-// 📌 CREAR
 router.post("/", (req, res) => {
     const { fecha, hora, titulo, descripcion } = req.body;
 
@@ -72,7 +71,7 @@ router.post("/", (req, res) => {
     });
 });
 
-// 📌 EDITAR POR ID
+
 router.put("/:id", (req, res) => {
     const eventos = obtenerEventos();
     const id = parseInt(req.params.id);
@@ -93,7 +92,7 @@ router.put("/:id", (req, res) => {
     res.json({ mensaje: "Evento actualizado" });
 });
 
-// 📌 ELIMINAR POR ID
+
 router.delete("/:id", (req, res) => {
     const eventos = obtenerEventos();
     const id = parseInt(req.params.id);
