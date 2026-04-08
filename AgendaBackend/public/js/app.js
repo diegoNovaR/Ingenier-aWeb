@@ -35,11 +35,62 @@
                 container.appendChild(divFecha);
 
                 data[fecha].forEach(archivo => {
-                    const divArchivo = document.createElement('div');
-                    divArchivo.className = 'event-file';
-                    divArchivo.innerText = " " + archivo;
-                    container.appendChild(divArchivo);
-                });
+        const divArchivo = document.createElement('div');
+        divArchivo.className = 'event-file';
+
+        //texto del evento
+        const texto = document.createElement("span");
+        texto.innerText = " " + archivo;
+
+        // ELIMINAR
+        const btnEliminar = document.createElement("span");
+        btnEliminar.innerHTML = `<i class="fa-solid fa-trash"></i>`;
+        btnEliminar.style.cursor = "pointer";
+        btnEliminar.style.marginLeft = "10px";
+
+        btnEliminar.onclick = async () => {
+        const ok = confirm("¿Seguro que deseas eliminar este evento?");
+        if (!ok) return;
+
+        await fetch(`http://localhost:3000/eventos/${fecha}/${archivo}`, {
+            method: "DELETE"
+        });
+
+        listarEventos();
+    };
+
+    // EDITAR
+    const btnEditar = document.createElement("span");
+    btnEditar.innerHTML = `<i class="fa-solid fa-pen"></i>`;
+    btnEditar.style.cursor = "pointer";
+    btnEditar.style.marginLeft = "10px";
+
+    btnEditar.onclick = async () => {
+        const nuevoTitulo = prompt("Nuevo título:");
+        const nuevaDescripcion = prompt("Nueva descripción:");
+
+        if (!nuevoTitulo) return;
+
+        await fetch(`http://localhost:3000/eventos/${fecha}/${archivo}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                titulo: nuevoTitulo,
+                descripcion: nuevaDescripcion
+            })
+        });
+
+        listarEventos();
+    };
+
+    //ensamblar elemento
+    divArchivo.appendChild(texto);
+    divArchivo.appendChild(btnEditar);
+    divArchivo.appendChild(btnEliminar);
+
+    container.appendChild(divArchivo);});
             }
         }
 

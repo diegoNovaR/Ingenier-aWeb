@@ -74,21 +74,55 @@ router.post("/", (req, res) => {
  */
 router.delete("/:fecha/:hora", (req, res) => {
     const { fecha, hora } = req.params;
-    const rutaArchivo = path.join(carpetaBase, fecha, `${hora}.txt`);
 
-    if (fs.existsSync(rutaArchivo)) {
-        fs.unlinkSync(rutaArchivo);
-        
-        // Opcional: Si la carpeta de la fecha queda vacía, borrarla
-        const rutaFecha = path.join(carpetaBase, fecha);
-        if (fs.readdirSync(rutaFecha).length === 0) {
-            fs.rmdirSync(rutaFecha);
+    const rutaFecha = path.join(carpetaBase, fecha);
+    const rutaArchivo = path.join(rutaFecha, `${hora}.txt`);
+
+    try {
+        //validar existencia
+        if (!fs.existsSync(rutaArchivo)) {
+            return res.status(404).json({ error: "Evento no encontrado" });
         }
 
-        res.json({ mensaje: "Evento eliminado" });
-    } else {
-        res.status(404).json({ error: "Evento no encontrado" });
+        //eliminar archivo
+        fs.unlinkSync(rutaArchivo);
+
+        //limpiar carpeta si queda vacía
+        if (fs.existsSync(rutaFecha)) {
+            const archivosRestantes = fs.readdirSync(rutaFecha);
+
+            if (archivosRestantes.length === 0) {
+                fs.rmdirSync(rutaFecha);
+            }
+        }
+
+        return res.json({ mensaje: "Evento eliminado correctamente" });
+
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({ error: "Error al eliminar evento" });
     }
 });
+
+/**
+ * EDITAR: Editar un evento
+ */
+
+router.put("/:fecha/:hora", (req, res) => {
+    const { fecha, hora } = req.params;
+    const { titulo, descripcion } = req.body;
+
+    const rutaArchivo = path.join(carpetaBase, fecha, `${hora}.txt`);
+
+    if (!fs.existsSync(rutaArchivo)) {
+        return res.status(404).json({ error: "Evento no encontrado" });
+    }
+
+    const contenido = `${titulo}\n${descripcion || ""}`;
+    fs.writeFileSync(rutaArchivo, contenido);
+
+    res.json({ mensaje: "Evento actualizado" });
+});
+
 
 module.exports = router;

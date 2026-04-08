@@ -95,6 +95,10 @@ button:hover {
     cursor: pointer;
     text-decoration: underline;
     margin-top: 5px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 /* Hover en eventos */
