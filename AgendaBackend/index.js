@@ -1,7 +1,10 @@
 const express = require("express");
 const app = express();
 const eventosRoutes = require("./routes/eventos");
+const cors = require("cors");
 
+
+app.use(cors());
 app.use(express.json()); // para leer JSON
 app.use(express.static("public"));
 
