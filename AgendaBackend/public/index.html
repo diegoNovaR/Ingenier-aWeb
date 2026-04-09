@@ -7,8 +7,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <h1> Agenda Personal </h1>
+    <body>
+
+    <!-- PORTADA -->
+    <div id="portada" class="portada">
+        <div class="portada-contenido">
+            <h1>Agenda Personal</h1>
+            <p>Organiza tus eventos de forma simple y elegante</p>
+            <button onclick="entrarAgenda()">Entrar</button>
+        </div>
+    </div>
+
+    <!-- APP -->
+    <div id="app" class="container" style="display: none;">
+        <h1>Agenda Personal</h1>
         
         <div id="form-evento">
             <h3>Crear Nuevo Evento</h3>
@@ -24,7 +36,7 @@
             <div class="form-group">
                 <label>Descripción:</label> <textarea id="descripcion"></textarea>
             </div>
-            <button onclick="guardarEvento()"> Guardar Evento </button>
+            <button onclick="guardarEvento()">Guardar Evento</button>
         </div>
 
         <hr>
@@ -34,5 +46,6 @@
     </div>
 
     <script src="js/app.js"></script>
+</body>
 </body>
 </html>
