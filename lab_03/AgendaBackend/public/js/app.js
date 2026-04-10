@@ -1,3 +1,5 @@
+const API_URL = 'http://localhost:8098'
+
 // Función para guardar el evento enviando datos al backend
 async function guardarEvento() {
     const fecha = document.getElementById('fecha').value;
@@ -17,7 +19,7 @@ async function guardarEvento() {
         descripcion
     };
 
-    const response = await fetch('http://localhost:3000/eventos', {
+    const response = await fetch(`${API_URL}/eventos`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
@@ -34,7 +36,7 @@ async function guardarEvento() {
 
 // Función para obtener y mostrar los eventos en formato árbol desplegable
 async function listarEventos() {
-    const res = await fetch('http://localhost:3000/eventos');
+    const res = await fetch(`${API_URL}/eventos`);
     const data = await res.json();
 
     const container = document.getElementById('arbol-eventos');
@@ -114,7 +116,7 @@ async function listarEventos() {
                 const ok = confirm("¿Seguro que deseas eliminar este evento?");
                 if (!ok) return;
 
-                await fetch(`http://localhost:3000/eventos/${fecha}/${nombreArchivo}`, {
+                await fetch(`${API_URL}/eventos/${fecha}/${nombreArchivo}`, {
                     method: "DELETE"
                 });
 
@@ -134,7 +136,7 @@ async function listarEventos() {
 
                 if (!nuevoTitulo) return;
 
-                await fetch(`http://localhost:3000/eventos/${fecha}/${nombreArchivo}`, {
+                await fetch(, {
                     method: "PUT",
                     headers: {
                         "Content-Type": "application/json"
