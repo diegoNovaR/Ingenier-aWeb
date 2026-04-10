@@ -92,7 +92,8 @@ router.delete("/:fecha/:hora", (req, res) => {
     const { fecha, hora } = req.params;
 
     const rutaFecha = path.join(carpetaBase, fecha);
-    const rutaArchivo = path.join(rutaFecha, `${hora}.txt`);
+    const nombreFinal = hora.endsWith('.txt') ? hora : `${hora}.txt`;
+    const rutaArchivo = path.join(rutaFecha, nombreFinal);
 
     try {
         if (!fs.existsSync(rutaArchivo)) {
@@ -125,7 +126,8 @@ router.put("/:fecha/:hora", (req, res) => {
     const { fecha, hora } = req.params;
     const { titulo, descripcion } = req.body;
 
-    const rutaArchivo = path.join(carpetaBase, fecha, `${hora}.txt`);
+    const nombreFinal = hora.endsWith('.txt') ? hora : `${hora}.txt`;
+    const rutaArchivo = path.join(carpetaBase, fecha, nombreFinal);
 
     if (!fs.existsSync(rutaArchivo)) {
         return res.status(404).json({ error: "Evento no encontrado" });
