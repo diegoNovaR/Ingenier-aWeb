@@ -236,22 +236,68 @@ Esto impacta principalmente a:
 - Evitar depender exclusivamente de scripts para funcionalidades críticas.
 
 ---
-## 📱 Prueba en Dispositivos Móviles
+## 📱 Prueba en Dispositivos Móviles (Responsive Design)
 
-**Descripción:**
-Evaluación en pantallas pequeñas.
+Se evaluó la visualización y el comportamiento del portal de RENIEC en pantallas reducidas, simulando un dispositivo móvil (400x704 px) mediante las herramientas de desarrollo de Chrome (DevTools).
 
-**Resultados:**
-- 
+---
 
-**Evidencias:**
-![Movil](ruta_imagen)
+### 🔍 Comportamiento del DOM
 
-**Problemas detectados:**
-- 
+El sitio presenta un diseño **responsive (adaptativo)**, donde los elementos se reorganizan de forma vertical al reducir el ancho de pantalla.
 
-**Propuesta de mejora:**
-- 
+- El contenedor principal (`senna_surface1`) se ajusta correctamente al ancho del dispositivo.
+- Los bloques de contenido se redistribuyen sin romper la estructura general.
+- La navegación principal se mantiene funcional en formato reducido.
+
+---
+
+### 👁️ Omisión y Visibilidad de Elementos
+
+- El menú superior se contrae en un **icono de hamburguesa**, optimizando el espacio en pantalla.
+- Se conserva el acceso a información crítica, como el contenido relacionado a **"Elecciones Generales 2026"**.
+- No se detecta pérdida significativa de contenido importante entre versión escritorio y móvil.
+
+---
+
+### ⚠️ Problemas Detectados (Usabilidad)
+
+- **Superposición de texto:**
+  En el encabezado dinámico, algunos textos se solapan, afectando la legibilidad.
+
+- **Espaciado insuficiente:**
+  Los botones de acción (por ejemplo, *"Conoce el Padrón..."*) presentan márgenes reducidos.
+
+- **Dificultad de interacción:**
+  Los elementos táctiles son pequeños o están muy juntos, lo que puede dificultar su uso para:
+  - Personas con dificultades motrices
+  - Usuarios con pantallas pequeñas
+
+---
+
+### 📸 Evidencia
+
+![Vista móvil](/celular.png)
+
+---
+
+### 🧠 Conclusión
+
+El portal de RENIEC implementa un diseño responsivo adecuado, manteniendo la estructura y el contenido en dispositivos móviles. Sin embargo, presenta problemas de usabilidad relacionados con la interacción táctil y la legibilidad.
+
+No cumple completamente con buenas prácticas de diseño móvil, especialmente en lo relacionado con:
+- Tamaño de elementos interactivos
+- Espaciado entre componentes
+- Legibilidad del contenido
+
+---
+
+### 🛠️ Propuesta de Mejora
+
+- Aumentar el tamaño de botones y áreas táctiles (mínimo recomendado: 48px).
+- Mejorar el espaciado entre elementos interactivos.
+- Ajustar tamaños de fuente en encabezados para evitar superposición.
+- Aplicar principios de diseño **Mobile-Friendly** para mejorar la experiencia de usuario.
 
 ---
 
