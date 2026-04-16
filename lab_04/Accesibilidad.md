@@ -59,7 +59,7 @@ Esto indica que, aunque no existen fallos evidentes detectados automáticamente,
 - Adaptabilidad del contenido a diferentes dispositivos o condiciones visuales
 
 **Evidencias:**
-![Evidencia perceptible](/taw.png)
+![Evidencia perceptible](taw.png)
 
 **Problemas detectados:**
 - Posible ausencia o uso inadecuado de atributos `alt` en imágenes.
