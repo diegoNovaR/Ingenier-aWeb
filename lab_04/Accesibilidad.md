@@ -137,60 +137,105 @@ Compatibilidad con distintos dispositivos y tecnologías.
 
 **Herramienta:** Contrast Checker
 
-**Resultados:**
-- *(colocar resultados de contraste)*
-
-**Evidencias:**
-![Contraste](ruta_imagen)
-
-**Problemas detectados:**
-- 
-
-**Propuesta de mejora:**
-- 
+Se evaluó la legibilidad de la combinación de colores principal del portal de RENIEC (azul institucional sobre fondo amarillo) utilizando la herramienta **WebAIM Contrast Checker**, con el objetivo de verificar el cumplimiento de los estándares de accesibilidad para personas con baja visión o daltonismo.
 
 ---
 
+### A. Resultados de la Evaluación
+
+- **Color de fondo:** #F1B02F (Amarillo / Dorado)  
+- **Color de texto:** #275472 (Azul institucional)  
+- **Relación de contraste:** **4.23:1**
+
+---
+
+### B. Nivel de Cumplimiento
+
+| Elemento                | Estándar WCAG | Resultado | Estado       |
+|------------------------|--------------|----------|-------------|
+| Texto normal           | AA (4.5:1)   | 4.23:1   | ❌ No cumple |
+| Texto grande           | AA (3.0:1)   | 4.23:1   | ✅ Cumple    |
+| Componentes de UI      | AA (3.0:1)   | 4.23:1   | ✅ Cumple    |
+| Todo tipo de texto     | AAA (7.0:1)  | 4.23:1   | ❌ Crítico   |
+
+---
+
+### C. Análisis y Problemas Detectados
+
+- **Barrera de lectura:**  
+  La relación de contraste de **4.23:1** es inferior al mínimo requerido (**4.5:1**) para texto normal según WCAG 2.1.  
+  Esto dificulta la lectura para usuarios con baja visión.
+
+- **Inconsistencia en el diseño:**  
+  Aunque el texto grande cumple con el nivel AA, el contenido general no cumple con el estándar mínimo, lo que compromete la accesibilidad del sitio.
+
+- **Impacto en usuarios:**  
+  Usuarios con daltonismo o problemas visuales pueden tener dificultades para distinguir el contenido, especialmente en menús o textos informativos.
+
+---
+
+### D. Propuesta de Corrección
+
+- **Ajuste de color:**
+  Oscurecer el color azul (#275472) hasta alcanzar al menos una relación de **4.5:1**.
+
+- **Mejora de diseño:**
+  Priorizar combinaciones de alto contraste, como:
+  - Texto negro sobre fondo claro
+  - Azul oscuro sobre blanco
+
+---
 ## ⚙️ Prueba sin JavaScript
 
-**Descripción:**
-Evaluación de funcionalidad sin JS.
-
-**Resultados:**
-- 
-
-**Evidencias:**
-![Sin JS](ruta_imagen)
-
-**Problemas detectados:**
-- 
-
-**Propuesta de mejora:**
-- 
+Se evaluó la resiliencia del portal de RENIEC ante la desactivación de JavaScript, con el objetivo de determinar si el contenido crítico permanece accesible bajo condiciones técnicas limitadas.
 
 ---
 
-## ⌨️ Navegación con Teclado
+### 🔍 Observación Técnica
 
-**Aspectos evaluados:**
-- Foco visible
-- Orden de navegación
-- Acceso a botones y formularios
-
-**Resultados:**
-- 
-
-**Evidencias:**
-![Teclado](ruta_imagen)
-
-**Problemas detectados:**
-- 
-
-**Propuesta de mejora:**
-- 
+Se identificó que el sitio utiliza el framework **Liferay**, evidenciado por la presencia de clases como `yui3-skin-sam` en el elemento `<body>`. Este framework presenta una alta dependencia de JavaScript para la renderización de componentes dinámicos.
 
 ---
 
+### ⚠️ Impacto en la Accesibilidad
+
+#### 🧭 Menú y Navegación
+- Al desactivar JavaScript, el menú lateral (tipo hamburguesa) deja de funcionar.
+- Elementos interactivos como el buscador no responden.
+- La navegación se vuelve limitada o inexistente.
+
+#### 📊 Contenido Dinámico
+- El carrusel de **"Elecciones Generales 2026"** no se muestra correctamente.
+- Los gráficos integrados (como los de PowerBI) no cargan o pierden funcionalidad.
+- Se pierde acceso a información relevante para el usuario.
+
+---
+
+### 📸 Evidencia
+
+![Prueba sin JavaScript](/sinJs.png)
+
+---
+
+### 🧠 Conclusión
+
+El portal presenta una **dependencia crítica de JavaScript**, lo que afecta negativamente su accesibilidad. No cumple con el principio de **degradación progresiva (graceful degradation)**, ya que el contenido esencial no está disponible sin scripts activos.
+
+Esto impacta principalmente a:
+- Usuarios con navegadores antiguos
+- Personas con conexiones lentas
+- Usuarios que desactivan JavaScript por seguridad
+
+---
+
+### 🛠️ Propuesta de Mejora
+
+- Implementar una estrategia de **degradación progresiva** o **progressive enhancement**.
+- Asegurar que los elementos clave (menú, enlaces, contenido informativo) funcionen sin JavaScript.
+- Proporcionar versiones alternativas del contenido dinámico (ej. texto o enlaces estáticos).
+- Evitar depender exclusivamente de scripts para funcionalidades críticas.
+
+---
 ## 📱 Prueba en Dispositivos Móviles
 
 **Descripción:**
