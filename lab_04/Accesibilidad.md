@@ -76,62 +76,7 @@ Esto indica que, aunque no existen fallos evidentes detectados automáticamente,
 
 ---
 
-### 2. Operable
 
-**Descripción:**
-La interfaz debe ser navegable y usable.
-
-**Resultados:**
-- 
-
-**Evidencias:**
-![Evidencia operable](ruta_imagen)
-
-**Problemas detectados:**
-- 
-
-**Propuesta de mejora:**
-- 
-
----
-
-### 3. Comprensible
-
-**Descripción:**
-La información y el funcionamiento deben ser claros.
-
-**Resultados:**
-- 
-
-**Evidencias:**
-![Evidencia comprensible](ruta_imagen)
-
-**Problemas detectados:**
-- 
-
-**Propuesta de mejora:**
-- 
-
----
-
-### 4. Robusto
-
-**Descripción:**
-Compatibilidad con distintos dispositivos y tecnologías.
-
-**Resultados:**
-- 
-
-**Evidencias:**
-![Evidencia robusto](ruta_imagen)
-
-**Problemas detectados:**
-- 
-
-**Propuesta de mejora:**
-- 
-
----
 
 ## 🎨 Prueba de Contraste de Color
 
@@ -213,7 +158,7 @@ Se identificó que el sitio utiliza el framework **Liferay**, evidenciado por la
 
 ### 📸 Evidencia
 
-![Prueba sin JavaScript](/sinJs.png)
+![Prueba sin JavaScript](sinJs.png)
 
 ---
 
@@ -277,7 +222,7 @@ El sitio presenta un diseño **responsive (adaptativo)**, donde los elementos se
 
 ### 📸 Evidencia
 
-![Vista móvil](/celular.png)
+![Vista móvil](celular.png)
 
 ---
 
@@ -369,7 +314,7 @@ A partir de las cabeceras HTTP obtenidas, se identificaron las siguientes config
 
 ### 📸 Evidencia
 
-![Evidencia curl](/curl.png)
+![Evidencia curl](curl.png)
 
 ---
 
@@ -465,60 +410,9 @@ Con el fin de mejorar la calidad del código y alinearlo con los estándares act
 
 
 **Evidencias:**
-![Evidencia robusto](/2_1.png)
+![Evidencia robusto](2_1.png)
 
-![Evidencia robusto](/html3.png)
-
----
-
-### 🧪 Ejemplo de Corrección
-
-**Código incorrecto:**
-```html
-<script type="text/javascript" src="js/main.js" />
+![Evidencia robusto](html3.png)
 
 ---
-
-## 🧠 Análisis General
-
-**Resumen de problemas:**
-- 
-
-**Impacto en usuarios:**
-- 
-
----
-
-## 🛠️ Propuestas de Mejora
-
-- 
-- 
-- 
-
----
-
-## 📎 Anexos
-
-*(Aquí puedes colocar todas las imágenes adicionales y evidencias)*
-
-### Anexo 1
-![Anexo 1](ruta_imagen)
-
-### Anexo 2
-![Anexo 2](ruta_imagen)
-
----
-
-## 📂 Repositorio GitHub
-
-- Enlace: *(colocar link del repositorio)*
-
----
-
-## 📄 Entregable
-
-- Archivo Markdown ✔️  
-- Exportación a PDF ✔️  
-- Repositorio GitHub ✔️  
-
 ---
