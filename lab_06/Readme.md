@@ -185,5 +185,30 @@ Se crean modelos en base a la base de datos que se configuro y creo anteriorment
 
 ![Imagen 12 ](./imagenesReadme/modelos.png)
 
+### Scaffold con controladores
+
+- Click derecho en Directorio Controllers y en Agregar
+
+![Imagen 13 ](./imagenesReadme/controlador1.png)
+
+- Seleccionar elemento con scaffold..
+
+![Imagen 14 ](./imagenesReadme/controlador2.png)
+
+- Seleccionar controlador de MVC que usa entity framework
+
+![Imagen 15 ](./imagenesReadme/controlador3.png)
+
+- Elegir el modelo que se desea crear
+
+![Imagen 16 ](./imagenesReadme/controlador4.png)
+
+- Seleccionamos el context de la BD
+
+![Imagen 17 ](./imagenesReadme/controlador5.png.png)
+
+- Nombrar al controller y agregamos
+
+![Imagen 18 ](./imagenesReadme/controlador6.png)
 
 ---
