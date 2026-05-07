@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+
+  web:
+    build:
+      context: .
+      dockerfile: scaffoldingCRUD/Dockerfile
+
+    ports:
+      - "8080:8080"
+
+    depends_on:
+      - sqlserver
+
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=Canchitas_iw;User Id=sa;Password=Password123*;TrustServerCertificate=True;
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+
+    container_name: sqlserver
+
+    environment:
+      SA_PASSWORD: "Password123*"
+      ACCEPT_EULA: "Y"
+
+    ports:
+      - "1433:1433"
