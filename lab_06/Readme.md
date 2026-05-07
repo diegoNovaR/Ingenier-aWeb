@@ -60,9 +60,9 @@ Con la configuración anterior todo sucede de manera automática, ahora vamos a 
 
 #### Los resultados que tenemos serían:
 
-![Imagen 9 ](./imagenesReadme/dacker1.png)
+![Imagen 9 ](./imagenesReadme/docker1.png)
 
-![Imagen 10 ](./imagenesReadme/dacker2.png)
+![Imagen 10 ](./imagenesReadme/docker2.png)
 
 #### Ahora dockerizamos la base de datos:
 
@@ -79,7 +79,7 @@ Una vez terminado los pasos anteriores y se crearon las tablas en el contenedor 
 
 Se crean modelos en base a la base de datos que se configuro y creo anteriormente.
 
-![Imagen 12 ](./imagenesReadme/modelos.png.png)
+![Imagen 12 ](./imagenesReadme/modelos.png)
 
 
 ---
