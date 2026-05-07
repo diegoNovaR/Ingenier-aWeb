@@ -1,15 +1,119 @@
-# Nombre del Proyecto: [Inserta aquí el título]
+# Nombre del Proyecto: [ Sistema de reserva de canchas deportivas ]
 
-Breve descripción de qué hace la aplicación y cuál es su objetivo principal.
+Sistema web desarrollado en ASP.NET MVC que permite gestionar canchas deportivas mediante operaciones CRUD. Los usuarios pueden consultar la disponibilidad de canchas, realizar reservas y visualizar información relacionada con el rendimiento y uso de las instalaciones deportivas.
 
+El proyecto utiliza Entity Framework y SQL Server para la administración de datos, siguiendo una arquitectura organizada basada en el patrón MVC.
+	
 ---
 
 ## 👥 Integrantes
 * **Diego Nova Rosas** 
 * **Renzo Murillo Alvarez** 
 * **Angelica Castillo Tovar** 
+* **Marcelo Vieri Silva Cabrera**
 
 ---
+
+---
+
+# Descripción General del Proyecto
+
+El sistema fue diseñado para facilitar la administración de canchas deportivas y mejorar el proceso de reservas.
+
+Actualmente, el proyecto cuenta con dos entidades principales:
+
+- **Cancha**
+- **Empresa**
+
+La relación entre ambas permite identificar qué empresa administra cada cancha deportiva.
+
+## Modelo de Datos
+
+![Imagen Modelo](./imagenesReadme/modelo_datos.png)
+
+---
+
+---
+
+# Administración de Carpetas del Proyecto
+
+La estructura del proyecto se organizó siguiendo la arquitectura MVC de ASP.NET.
+
+```text
+scaffoldingCRUD/
+│
+├── Controllers/
+├── Models/
+├── Properties/
+└── Views/
+```
+
+## Explicación de Carpetas
+
+### Controllers
+Contiene los controladores encargados de manejar las solicitudes del usuario y conectar las vistas con la lógica del sistema.
+
+Aquí se implementan:
+- CRUD de Canchas
+- CRUD de Empresas
+- Gestión de Reservas
+
+---
+
+---
+
+### Models
+Contiene las clases que representan las tablas de la base de datos.
+
+En esta carpeta se encuentran modelos como:
+- `Cancha`
+- `Empresa`
+
+Los modelos son generados mediante Entity Framework y Scaffolding.
+
+---
+
+### Properties
+Incluye configuraciones generales del proyecto y archivos de propiedades de ASP.NET.
+
+---
+
+### Views
+Contiene las interfaces visuales del sistema.
+
+Aquí se encuentran:
+- Formularios
+- Tablas de registros
+- Pantallas de edición
+- Interfaces de reserva
+
+---
+
+# Funcionalidades Implementadas
+
+## Gestión de Canchas
+
+El sistema permite:
+
+- Registrar canchas deportivas.
+- Editar información de las canchas.
+- Eliminar registros.
+- Consultar disponibilidad.
+- Visualizar listado de canchas.
+
+---
+
+## Gestión de Empresas
+
+Se implementó un módulo CRUD para administrar las empresas responsables de las canchas deportivas.
+
+Permite:
+- Registrar empresas.
+- Editar información.
+- Eliminar registros.
+
+---
+
 
 ## 1. Creación del Proyecto en Visual Studio (MVC)
 
