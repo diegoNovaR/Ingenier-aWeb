@@ -205,7 +205,7 @@ Se crean modelos en base a la base de datos que se configuro y creo anteriorment
 
 - Seleccionamos el context de la BD
 
-![Imagen 17 ](./imagenesReadme/controlador5.png.png)
+![Imagen 17 ](./imagenesReadme/controlador5.png)
 
 - Nombrar al controller y agregamos
 
